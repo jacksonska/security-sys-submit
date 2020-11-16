@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Displaying Most Recent Data{% endblock %}
+
+{% block content %}
+<h1>Displaying most recent data</h1>
+<h3>Logged in As: {{username}}</h3>
+
+<p>These are the Data readings from the most recent active period: </p>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <p style="color:#FF0000";>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<p><pre>&emsp;</pre>{{jsonfile}}</p>
+
+
+<form action="#", method="POST">
+    <p>
+        <b>Return to {{username}}'s Control Page:</b>
+    </p>
+    <p><input type="submit", name="bttn" value="Return to User Page"/></p>
+    
+</form>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>Please login to access the system controls</h1>
+<form action="/login", method="GET">
+    <p><input type="submit", value="login"></p>
+</form>
+{% endblock %}

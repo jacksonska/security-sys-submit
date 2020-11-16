@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}User's control page{% endblock %}
+
+{% block content %}
+<h1>Tell the system what to do</h1>
+<h2>Logged in As: {{username}}</h2>
+<p>System Status: {{status}}</p>
+
+
+<form action="#", method="POST">
+    <p>Turn Sensors ON or OFF:</p>
+    <input type="submit", name="ctl_btn", value="ON"></input>
+    <input type="submit", name="ctl_btn", value="OFF"></input>
+</form>
+
+<form action="/removeReadings", method="GET">
+    <p>Manage the data readings</p>
+    <input type="submit", value="Clear ALL readings"></input>
+</form>
+<form action="/displayReadings", method="GET">
+    <input type="submit", value="Show ALL readings"></input>
+</form>
+
+<form action="/displayReadings", method="POST">
+    <p>Data reading index:</p>
+    <input type="test", name="idx"></input>
+    <input type="submit",name="idx_btn", value="show"></input>
+</form>
+
+<form action="/logout", method="GET">
+    <p>Logout</p>
+    <input type="submit", value="Logout"></button> 
+</form>
+{% endblock %}

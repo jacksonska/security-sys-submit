@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Login To MQTT Broker page{% endblock%}
+
+
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <p style="color:#FF0000";>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<h2>Please enter a username and password to access System Controls</h2>
+<form action="#", method="POST">
+    <p>username:</p>
+    <p><input type="test", name="nm"/></p>
+    <p>password:</p>
+    <p><input type="password", name="pass"></p>
+    <p><input type="submit", value="submit"/></p>
+</form>
+{% endblock %}

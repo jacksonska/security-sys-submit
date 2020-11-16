@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Delete All readings from server{% endblock%}
+
+
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <p style="color:#FF0000";>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<h2>Please Re-enter {{username}}'s password To confirm you wish to delete all readings from the System</h2>
+<form action="#", method="POST">
+    <p>password:</p>
+    <p><input type="password", name="pass"></p>
+    <p><input type="submit", name="bttn" value="submit"/></p>
+    <p>Return to Control Page:</p>
+    <p><input type="submit", name="bttn" value="Return to User Page"/></p>
+</form>
+{% endblock %}
