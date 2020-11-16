@@ -36,6 +36,7 @@ def detector_callback(client, userdata, message):
             buzzer.off()
             # Send an HTTP post to the HTTP server for storage
             send_readings(server_data.http["address"], "ultrasonic", readings)
+            print("data sent!")
             # Reset the readings for the next batch
             readings.clear()
 

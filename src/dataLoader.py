@@ -50,5 +50,5 @@ class serverData:
                 }
         } 
         self.http = {
-            "address" : "192.168.1.58:5001"
+            "address" : "54.152.17.53:5000" # NOTE: NEED TO UPDATE THIS IP AND PORT WITH THE IP AND PORT OF YOUR CONTROL NODE
         }
